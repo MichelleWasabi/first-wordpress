@@ -1,9 +1,9 @@
 <?php
 namespace Rigo\Controller;
 
-use Rigo\Types\Course;
+use Rigo\Types\Create;
 
-class SampleController{
+class CreateController{
     
     public function getHomeData(){
         return [
@@ -11,8 +11,8 @@ class SampleController{
         ];
     }
     
-    public function getDraftCourses(){
-        $query = Course::all([ 'post_status' => 'publish' ]);
+    public function getCreates(){
+        $query = Create::all([ 'post_status' => 'publish' ]);
         return $query->posts;
     }
     
